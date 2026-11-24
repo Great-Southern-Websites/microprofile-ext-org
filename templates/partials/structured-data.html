@@ -1,35 +1,33 @@
 {@io.quarkiverse.roq.frontmatter.runtime.model.Site site}
-<!-- Structured data for search engines (schema.org). BUILDER: fill every field
-     from the business's own details; delete keys you have no real value for.
-     Keep it accurate when contact details, hours or locations change. -->
+<!-- Structured data for search engines (schema.org). An open-source project,
+     not a local business: an Organization with its website. Keep it accurate
+     when the contact details or social profiles change. -->
 <script type="application/ld+json">
 {|{
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "|}{=site.url.absolute}{|#business",
-  "name": "Extensions for MicroProfile",
-  "url": "|}{=site.url.absolute}{|",
-  "logo": "|}{=site.url('images/logo.png').absolute}{|",
-  "image": "|}{=site.url('images/logo.png').absolute}{|",
-  "description": "BUILDER: one sentence, the same as the home page description.",
-  "telephone": "+61 3 0000 0000",
-  "email": "hello@example.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "1 Example Street",
-    "addressLocality": "Suburb",
-    "addressRegion": "VIC",
-    "postalCode": "3000",
-    "addressCountry": "AU"
-  },
-  "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "17:00" }
-  ],
-  "sameAs": [],
-  "potentialAction": {
-    "@type": "ReserveAction",
-    "name": "Book",
-    "target": "|}{=site.url('contact').absolute}{|"
-  }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "|}{=site.url.absolute}{|#organization",
+      "name": "Extensions for MicroProfile",
+      "url": "|}{=site.url.absolute}{|",
+      "logo": "|}{=site.url('images/logo.png').absolute}{|",
+      "image": "|}{=site.url('images/logo.png').absolute}{|",
+      "description": "A collection of community extensions for Eclipse MicroProfile: Config, OpenApi, Health, JAX-RS and REST Client.",
+      "email": "microprofile.ext@phillip-kruger.com",
+      "sameAs": [
+        "https://github.com/microprofile-extensions",
+        "https://twitter.com/MicroprofileE"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "|}{=site.url.absolute}{|#website",
+      "url": "|}{=site.url.absolute}{|",
+      "name": "Extensions for MicroProfile",
+      "description": "A collection of community extensions for Eclipse MicroProfile: Config, OpenApi, Health, JAX-RS and REST Client.",
+      "publisher": { "@id": "|}{=site.url.absolute}{|#organization" }
+    }
+  ]
 }|}
 </script>

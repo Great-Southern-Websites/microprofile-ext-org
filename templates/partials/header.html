@@ -2,20 +2,20 @@
 <header class="site-header">
   <div class="container bar">
     <a class="brand" href="{=site.url}">
-      <!-- BUILDER: replace with the logo, or leave a wordmark if there is none.
-           Two images, one per theme, and main.css swaps them:
-             <img class="logo-light" src="{=site.url('images/logo.png')}" alt="Extensions for MicroProfile">
-             <img class="logo-dark" src="{=site.url('images/logo-dark.png')}" alt="Extensions for MicroProfile">
-           Both carry the name: only one is ever visible, and a hidden image is not
-           announced, so the link has exactly one name in either theme. -->
+      <img class="logo-light" src="{=site.url('images/logo.png')}" alt="Extensions for MicroProfile" width="200" height="200">
+      <img class="logo-dark" src="{=site.url('images/logo-dark.png')}" alt="Extensions for MicroProfile" width="200" height="200">
       <span class="brand-name">Extensions for MicroProfile</span>
     </a>
     <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Toggle menu">
     <label for="nav-toggle" class="nav-toggle"><span></span></label>
     <nav class="site-nav" aria-label="Main navigation">
       <ul>
-        <!-- BUILDER: one <li> per page, mirroring the original site's navigation -->
-        <li><a href="{=site.url}">Home</a></li>
+        <li><a href="https://github.com/microprofile-extensions/config-ext/blob/master/README.md" title="Extra Config sources and utilities">Config</a></li>
+        <li><a href="https://github.com/microprofile-extensions/openapi-ext/blob/master/README.md" title="Swagger UI for OpenApi">OpenApi</a></li>
+        <li><a href="https://github.com/microprofile-extensions/health-ext/blob/master/README.md" title="Additional reusable health probes and UI">Health</a></li>
+        <li><a href="https://github.com/microprofile-extensions/jaxrs-ext/blob/master/README.md" title="Some extensions for JAX-RS">JAX-RS</a></li>
+        <li><a href="https://github.com/microprofile-extensions/restclient-ext/blob/master/README.md" title="Some extensions for REST Client">REST Client</a></li>
+        <li><a href="https://github.com/microprofile-extensions">GitHub</a></li>
       </ul>
     </nav>
   </div>
